@@ -51,11 +51,10 @@ def single_type_candy_count(filename):
         return numCandies     
 
 def reflections_and_projections(points):
-    print(math.e)
     def rotateX(point):
         x, y = point
         angle = math.radians(90)
-        fx = math.sin(angle) * (y)
+        fx = math.sin(angle) *(y)
         return fx
     def rotateY(point):
         x, y = point
@@ -80,8 +79,8 @@ def reflections_and_projections(points):
     for i in range(points[0].size):
         xvalue = points[0][i]
         yvalue = points[1][i]
-        points[0][i] = round(xvalue*(dotProduct((xvalue, yvalue), (1,3)))/(math.pow(magnitude((xvalue, yvalue)),2)))
-        points[1][i] = round(yvalue*(dotProduct((xvalue, yvalue), (1,3)))/(math.pow(magnitude((xvalue, yvalue)),2)))
+        points[0][i] = (xvalue*(dotProduct((xvalue, yvalue), (1,3)))/(math.pow(magnitude((xvalue, yvalue)),2)))
+        points[1][i] = (yvalue*(dotProduct((xvalue, yvalue), (1,3)))/(math.pow(magnitude((xvalue, yvalue)),2)))
     return points   
         
 
